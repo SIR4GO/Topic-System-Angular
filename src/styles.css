@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+}
+.block-style
+{
+  display: block;
+}
+
+.link-style
+{
+  text-decoration: none;
+  color: snow;
+  cursor: pointer;
+}
+.button-style
+{
+  background:none;
+  outline-color: goldenrod;
+  border: none;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 7px;
+  font-weight: bold;
+  color: snow;
+  height: 45px;
+  border-radius: 2px;
+}
+
