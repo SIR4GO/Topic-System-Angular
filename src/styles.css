@@ -30,4 +30,41 @@ body{
   height: 45px;
   border-radius: 2px;
 }
+.box-limit
+{
+  margin: auto;
+  width: 1200px;
+
+}
+
+.topic-overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.9);
+  z-index: 100;
+}
+.common-overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.3);
+  z-index: -1;
+
+}
+
+.close-btn
+{
+  background: none;
+  border: none;
+  color: black;
+  margin: auto 20px;
+  font-size: 20px;
+}
 

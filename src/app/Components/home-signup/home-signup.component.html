@@ -1,0 +1,26 @@
+<main class="signup-options">
+  <section class="options-cover row">
+       <div class="col-md-6 option-info ">
+         <section class="info">
+             <router-outlet></router-outlet>
+         </section>
+       </div>
+       <div class="col-md-6 option-method ">
+         <section class="square">
+           <label class="actor-label"  >Join Topic System as a </label>
+           <div class="button-box">
+               <button  (mouseleave)="removeBackground(author)" (mousemove)="changeBackground(author)" (click)="changeUrl(author)" class="author-button" value=".author-button" #author>Author</button>
+               <button (mouseleave)="removeBackground(follwer)" (mousemove)="changeBackground(follwer)"(click)="changeUrl(follwer)" class="follower-button" value=".follower-button" #follwer>Follower</button>
+           </div>
+           <label class="birth-label"  >What is your date of birth?</label>
+           <div class="form-group" >
+             <input  name="name" type="date" class="form-control" id="exampleName" aria-describedby="NameHelp" placeholder="Enter Product Name">
+           </div>
+
+           <button  (click)="signIn('facebook' )" class="signup-face block-style button-style"> <i  style="position: absolute; top: 14px; left: 18px" class="fa fa-facebook-f"></i>  Sign Up with Facebook</button>
+           <button  (click)="signIn('google' )" class="signup-gmail block-style button-style"> <i style="position: absolute; top: 14px; left: 18px" class="fa fa-google" aria-hidden="true" ></i> Sign Up with Google </button>
+
+         </section>
+       </div>
+  </section>
+</main>

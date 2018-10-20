@@ -1,0 +1,88 @@
+<app-dashboard></app-dashboard>
+<nav  class="dashboard-nav">
+    <ul class="option-list">
+      <li><a href="#"> Home</a></li>
+      <li><a href="#">Topics</a></li>
+      <li><a href="#">Notifications</a></li>
+      <li><a href="#">Messages</a></li>
+      <li><a href="#">Statistics</a></li>
+    </ul>
+</nav>
+
+
+<section id="pageBody" class="page-body">
+
+  <section class="topic-panel" style="display: none">
+    <div class="panel-slider">
+      <nav>
+
+        <button  class="close-btn" (click)="DisableTopicCreationPanel()" > X</button>
+        <h4 style="text-align: center;margin: auto 0; width: 86%;">Topic creation panel</h4>
+      </nav>
+      <header>
+        <div class="common-overlay"></div>
+        <div style="margin: auto ; width: 100%">
+          <h4 style=" color: white ; text-align: center ; margin-top: 14px" > <span style="color: darkseagreen; font-size: 30px ;font-weight: bold">|</span> First step </h4>
+          <p  style="color: white ;  text-align: center"> Choose topic's elements </p>
+        </div>
+
+      </header>
+
+      <div class="slider-body">
+
+       </div>
+
+      <footer>
+
+      </footer>
+
+    </div>
+  </section>
+
+ <div class="container">
+   <section class=" row topic-layout">
+     <div class=" topic-list col-sm-4">
+        <h4>My Topics </h4>
+         <span><a style="text-decoration: none ; color:#10849D " href="#">See all (20)</a> </span>
+         <ul>
+           <li> <i></i>  topic 1 </li>
+           <li> <i></i>  topic 2 </li>
+         </ul>
+     </div>
+     <div class="topic-addition col-sm-4">
+       <i  (click)="ActiveTopicCreationPanel()" title="add new topic" class=" plus-icon fa fa-plus fa-lg"></i>
+     </div>
+   </section>
+ </div>
+
+
+
+
+
+
+  <div   style="width: 200px " class="bag">
+    <input   style=" width: 100% ; height: 100% " type="text" placeholder="title"   #input1 />
+    <div (click)="activeInputToWriteIfClicked(over1 , input1)" class="block-overlay1"  #over1 style="position: absolute ; top: 0 ; left: 0 ; right: 0 ; bottom: 0 ; z-index: 100 ; height: 100% ; width: 100%"></div>
+  </div>
+
+
+  <div   style="width: 200px " class="bag">
+    <textarea   style=" width: 100% ; height: 100% " placeholder="title"   #input2 ></textarea>
+    <div (click)="activeInputToWriteIfClicked(over2 , input2)" class="block-overlay2" #over2 style="position: absolute ; top: 0 ; left: 0 ; right: 0 ; bottom: 0 ; z-index: 100 ; height: 100% ; width: 100%"></div>
+  </div>
+
+
+  <div    style="width: 200px " class="bag">
+    <input  type="password" style=" width: 100% ; height: 100% " placeholder="title"  #input3   >
+    <div  (click)="activeInputToWriteIfClicked(over3 , input3)" class="block-overlay3" #over3 style="position: absolute ; top: 0 ; left: 0 ; right: 0 ; bottom: 0 ; z-index: 100 ; height: 100% ; width: 100%"></div>
+  </div>
+
+  <!--<div class="screen" style="width: 100px; height: 100px ">-->
+    <!--<img  style="width: 100% ;height: 100%" src="/src/app/Components/dashboard/photos/net.cocooncreations.digitaltree.png" class="drag-image" id="draggable"/>-->
+  <!--</div>-->
+
+
+
+
+
+</section>

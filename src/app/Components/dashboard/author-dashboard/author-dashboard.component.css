@@ -1,0 +1,140 @@
+
+/*nav*/
+.dashboard-nav
+{
+  height: 45px;
+  background-color: #F7F7F7;
+  border-bottom: 1px solid silver;
+  display: flex;
+}
+.option-list
+{
+  list-style: none;
+  margin: auto;
+
+}
+.option-list li
+{
+  display: inline;
+  margin-right: 20px;
+  font-size: 14px;
+
+}
+.option-list li a
+{
+  text-decoration: none;
+  color: black;
+}
+
+
+
+/* Topic Layout*/
+
+.page-body .topic-layout
+{
+  margin-top: 40px;
+}
+
+.page-body .topic-layout h4
+{
+   margin-bottom: 30px;
+}
+.page-body .topic-layout span
+{
+  border-bottom: 1px solid gainsboro;
+  padding: 0 0 10px 0;
+  width: 100%;
+  display: block;
+  font-weight: bold;
+}
+
+.page-body .topic-layout ul
+{
+  list-style: none;
+  padding: 0;
+  margin-left: 5px;
+  color: #0F415E;
+}
+
+.page-body .topic-layout ul li
+{
+  margin-bottom: 20px;
+
+}
+
+.page-body .topic-layout li:first-child
+{
+  margin-top: 16px;
+}
+
+
+
+.page-body .topic-addition
+{
+  background-color: #F6F7F7;
+  margin-left: 50px;
+  border-radius: 4px;
+  display: flex;
+}
+
+
+.page-body .topic-addition .plus-icon
+{
+  margin: auto;
+  padding: 10px;
+  font-size: 35px;
+  color: gray;
+
+}
+
+.page-body .topic-addition .plus-icon:hover
+{
+  color: #518005;
+}
+
+
+
+
+/*Topic creation  panel*/
+
+
+.page-body .topic-panel .panel-slider
+{
+  background-color: #3A565D;
+  width: 70%;
+  height: 90%;
+  margin: auto;
+  border-radius: 5px;
+}
+
+
+
+.page-body .topic-panel .panel-slider nav
+{
+  height: 11%;
+  background-color: #F6F7F7;
+  display: flex;
+}
+
+.page-body .topic-panel .panel-slider header
+{
+  display: flex;
+  height: 26%;
+  background: url("../photos/blackboard-1846865_1280.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+.page-body .topic-panel .panel-slider .slider-body
+{
+   display: flex;
+   height: 52%;
+  background-color: lightgray;
+}
+
+.page-body .topic-panel .panel-slider footer
+{
+  display: flex;
+  height: 11%;
+  background-color: #F6F7F7;
+}

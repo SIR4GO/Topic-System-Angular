@@ -15,10 +15,14 @@ import {
   SocialLoginModule,
   AuthServiceConfig,
   GoogleLoginProvider,
-  FacebookLoginProvider, LinkedinLoginProvider,
+  // FacebookLoginProvider,
 } from 'angular-6-social-login';
 import {SocialSignInService} from './Services/social-sign-in.service';
 import {UserService} from './Services/user.service';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { AuthorDashboardComponent } from './Components/dashboard/author-dashboard/author-dashboard.component';
+import { FollowerDashboardComponent } from './Components/dashboard/follower-dashboard/follower-dashboard.component';
+import { HomeDashComponent } from './Components/dashboard/author-dashboard/home-dash/home-dash.component';
 
 
 
@@ -26,18 +30,15 @@ import {UserService} from './Services/user.service';
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
     [
-      {
-        id: FacebookLoginProvider.PROVIDER_ID,
-        provider: new FacebookLoginProvider("268815873963865")
-      },
+      // {
+      //   id: FacebookLoginProvider.PROVIDER_ID,
+      //   provider: new FacebookLoginProvider("268815873963865")
+      // },
       {
         id: GoogleLoginProvider.PROVIDER_ID,
         provider: new GoogleLoginProvider("371111978583-c2sbhkag9ervm0qtv4j5ur3jbkltqi88.apps.googleusercontent.com")
       },
-      {
-        id: LinkedinLoginProvider.PROVIDER_ID,
-        provider: new LinkedinLoginProvider("1098828800522-m2ig6bieilc3tpqvmlcpdvrpvn86q4ks.apps.googleusercontent.com")
-      },
+
     ]
 );
   return config;
@@ -51,6 +52,11 @@ export function getAuthServiceConfigs() {
     HomeSignupComponent,
     FollowerSignupComponent,
     AuthorSignupComponent,
+    DashboardComponent,
+    AuthorDashboardComponent,
+    FollowerDashboardComponent,
+    HomeDashComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -58,6 +64,7 @@ export function getAuthServiceConfigs() {
     RouterModule.forRoot(routes),
     HttpClientModule,
     SocialLoginModule,
+
 
   ],
   providers: [

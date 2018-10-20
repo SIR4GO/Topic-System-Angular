@@ -1,0 +1,64 @@
+
+<!--sign in overlay -->
+<div class="popup" style="display: none">
+  <section class="login row">
+      <div class="privacy-policy col-md-6">
+        <button  class="close-btn" (click)="disablePopup()" > X</button>
+        <section class="privacy-info">
+            <h2 class="login-title"> Good to see you <br> again! </h2>
+            <p> By logging into Topic Share System, you agree to our Terms of use and Privacy Policy.</p>
+        </section>
+      </div >
+      <div class="login-options col-md-6">
+        <button  id="bt"   (click)="signIn('facebook')" class="login-face block-style button-style" > <i style="position: absolute; top: 14px; left: 18px" class="fa fa-facebook-f"></i>  Continue with Facebook</button>
+        <button (click)="signIn('google')"  class=" login-gmail block-style button-style" > <i style="position: absolute; top: 14px; left: 18px" class="fa fa-google" aria-hidden="true" ></i> Continue with Google </button>
+      </div>
+  </section>
+</div>
+
+
+<header>
+  <div class="overlay" ></div>
+  <nav>
+      <div class="box">
+         <section>
+            <span class="mainLink">Topics</span>
+            <input type="text" id="search" placeholder="&#xF002; Search" >
+            <span class="brand">
+               <i class="far fa-newspaper"></i>
+               <span> Topic For All </span>
+            </span>
+
+            <span class="links">
+                <a (click)="popup()" style="cursor: pointer" id="st"> Login</a>
+                <a routerLink="/signup/author" >Sign Up</a>
+            </span>
+         </section>
+      </div>
+  </nav>
+  <section class="header-info">
+      <h3>You can share any topic with anyone  </h3>
+       <p> Science . Technology . Literal ..etc  </p>
+       <div class="author-btn">
+         <a (click)="popup()" style="cursor: pointer">Topic Author , Start here</a>
+       </div>
+       <div class="follower-btn">
+         <a (click)="popup()" style="cursor: pointer" >Topic Follower , Start here</a>
+       </div>
+  </section>
+</header>
+
+
+<p>
+  cxbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+  xcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+  xcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+  cbxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  xcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+  xcbbbbbbbbbbbbbbbbbbbbbbbbb
+  xcbbbbbbbbbbbbbbbbbbbbbbb
+  xcbbbbbbbbbbbbbbbbbbbbbbbb
+  cxbbbbbbbbbbbbbbbbbbbbbbbbb
+  cxbbbbbbbbbbbbbbbbbbbbbbb
+</p>
+

@@ -1,0 +1,101 @@
+
+.edit-background
+{
+  background-color: #518005 !important;
+  color: white !important;
+}
+
+.edit-temp-background
+{
+  background-color: #71B307 !important;
+  color: white !important;
+}
+.signup-options
+{
+  background: url("../home/photo/media-3683580_1920.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+}
+
+.options-cover
+{
+  width: 75%;
+  margin: auto;
+  min-height: 480px;
+
+}
+
+.option-info
+{
+  width: 50%;
+  background-color: rgb(0 ,41,74);
+
+}
+.option-method
+{
+  width: 50%;
+  background-color: white;
+  display: flex;
+}
+
+
+.option-method .square
+{
+  margin: 0 auto;
+  width: 75%;
+}
+.option-method .square .actor-label
+{
+  margin: 80px auto 7px auto;
+  width: 100%;
+  font-weight: bold;
+  color: #00294A;
+  display: block;
+}
+
+
+.option-method .square .button-box
+{
+  margin:auto;
+  width: 100%;
+  border: thin solid gainsboro ;
+
+
+}
+
+
+.option-method .square .button-box .author-button , .follower-button
+{
+  width: 50%;
+  background: none;
+  color: #71B307;
+  border: none;
+  font-weight: bold;
+  padding: 0;
+  height: 35px;
+outline: none;
+  cursor: pointer;
+}
+
+.option-method .square .birth-label
+{
+  margin:20px auto 7px auto;
+  width: 100%;
+  font-weight: bold;
+  color: #00294A;
+  display: block;
+}
+
+
+.option-method .square .signup-face
+{
+  width: 100%;
+  background-color: #4267B2;
+  margin-top: 30px;
+
+}
+.option-method .square .signup-gmail
+{
+  width: 100%;
+  background-color: #DE4639;
+}
