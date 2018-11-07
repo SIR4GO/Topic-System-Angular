@@ -95,31 +95,35 @@
 
 
 
-/*Topic creation  panel*/
-
+/*Topic creation  panel overlay */
 
 .page-body .topic-panel .panel-slider
 {
   background-color: #3A565D;
-  width: 70%;
+  width: 63%;
   height: 90%;
   margin: auto;
   border-radius: 5px;
+
 }
 
 
 
 .page-body .topic-panel .panel-slider nav
 {
-  height: 11%;
+  height: 8%;
   background-color: #F6F7F7;
   display: flex;
 }
 
+.page-body .topic-panel .panel-slider nav h4
+{
+  font-size: 1.23rem;
+}
 .page-body .topic-panel .panel-slider header
 {
   display: flex;
-  height: 26%;
+  height: 20%;
   background: url("../photos/blackboard-1846865_1280.jpg") no-repeat center;
   background-size: cover;
   position: relative;
@@ -128,13 +132,57 @@
 .page-body .topic-panel .panel-slider .slider-body
 {
    display: flex;
-   height: 52%;
-  background-color: lightgray;
+   height: 73%;
+   background-color: lightgray;
 }
 
 .page-body .topic-panel .panel-slider footer
 {
+  display: none;
+  height: 7%;
+  background-color: whitesmoke;
+}
+
+.page-body .topic-panel .panel-slider .slider-body
+{
+  /*overflow-y: scroll;*/
   display: flex;
-  height: 11%;
-  background-color: #F6F7F7;
+}
+
+.page-body .topic-panel .panel-slider .slider-body .topic-sheet
+{
+  height: 100%;
+  width: 800px;     /* standard width for topic sheet */
+  background-color: white;
+  overflow-y: scroll;
+
+}
+
+.page-body .topic-panel .panel-slider .slider-body .element-bar
+{
+  height: 100%;
+  background-color: black;
+  width: 60px;
+  border: 1px solid;
+  border-radius: 1px;
+
+}
+.page-body .topic-panel .panel-slider .slider-body .element-bar i:first-child
+{
+  margin-top: 30px;
+}
+.page-body .topic-panel .panel-slider .slider-body .element-bar i
+{
+  display: block;
+  margin-bottom: 25px;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.page-body .topic-panel .panel-slider .slider-body .element-bar i:last-child
+{
+  position: relative;
+  top: 33px;
+  font-size: 2.4rem;
 }

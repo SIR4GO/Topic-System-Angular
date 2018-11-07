@@ -11,24 +11,44 @@ declare let $: any;
 export class AuthorDashboardComponent implements OnInit {
 
    draggableElements: string[] = ["initial"] ;
-
+   currentStep:String = 'First step';
+   currentStepDescription:String = 'Create your topic';
   constructor() {}
 
-  editDragEffect(blockOverlay)
+  ngOnInit()
   {
-    console.log('here');
-    let overlay = $(blockOverlay);
-    overlay.css("display" , "block");
+
+//    $('.screen').draggable({ containment: ".page-body"   }).resizable({ maxHeight:200 , maxWidth: 200 });
+
+    const bag = $('.bag');
+    bag.draggable({containment:".topic-sheet"}).resizable();
+
+
+    // way to find height of div after scroll
+    // $('.topic-sheet').click(function () {
+    //    const element: HTMLElement = document.getElementById('sheet');
+    //      console.log(element.scrollHeight);
+    // });
+
+  }
+
+
+
+  dragBorderEffect(  overlay: HTMLElement , input:HTMLElement)
+  {
+    const inp = $(input);
+    inp.css('border' ,'2px dashed #54B6CC');
+    this.deActivateInputsIfDocumentClicked( overlay , input);
   }
 
   activeInputToWriteIfClicked(blockOverlay: HTMLElement , input: HTMLElement)
   {
 
-     let overlay = $(blockOverlay);
-     let inp = $(input);
+     const inp = $(input);
+     const overlay = $(blockOverlay);
 
-     overlay.css("display" , "none");
-     inp.css("border" ,"2px solid blue")
+     overlay.css('display' , 'none');
+     inp.focus();
 
 
     this.deActivateInputsIfDocumentClicked(blockOverlay ,input );
@@ -42,12 +62,12 @@ export class AuthorDashboardComponent implements OnInit {
   deActivateInputsIfDocumentClicked(targetOverlay , input)
   {
 
-     let overlay = $(targetOverlay);
+     const overlay = $(targetOverlay);
 
-     if( ! this.draggableElements.includes(targetOverlay.className)  ){  // improve performance .. to avoid add event listener for  each call
+     if( ! this.draggableElements.includes(targetOverlay.className)  ){  // improve performance .. to avoid add event listener for  each call activeInput..()
 
        document.addEventListener('click' , function (event) {
-             let elem: HTMLElement = event.target as HTMLElement;
+             const elem: HTMLElement = event.target as HTMLElement;
              // console.log(elem);
 
              if( elem.matches('input') || elem.className === targetOverlay.className)  return;
@@ -56,8 +76,8 @@ export class AuthorDashboardComponent implements OnInit {
              // to improve performance
              if(overlay.css("display") != "block" ){
                overlay.css("display" , "block" );
-               $(input).css("border" , "none")
              }
+             $(input).css("border" , "none")
        });
 
        this.draggableElements.push(targetOverlay.className);
@@ -65,14 +85,6 @@ export class AuthorDashboardComponent implements OnInit {
      }
         //console.log( this.draggableElements);
         return;
-  }
-  ngOnInit()
-  {
-
-//    $('.screen').draggable({ containment: ".page-body"   }).resizable({ maxHeight:200 , maxWidth: 200 });
-      let bag = $('.bag');
-      bag.draggable({containment:".page-body"}).resizable({ maxHeight:200 , maxWidth: 200 });
-
   }
 
   ActiveTopicCreationPanel()
