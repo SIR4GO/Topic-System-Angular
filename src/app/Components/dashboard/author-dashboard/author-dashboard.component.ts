@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {createElement} from '@angular/core/src/view/element';
+import {ElementFactoryService} from '../../../Services/element-factory.service';
 declare let $: any;
 
 @Component({
@@ -20,8 +21,10 @@ export class AuthorDashboardComponent implements OnInit {
 
 //    $('.screen').draggable({ containment: ".page-body"   }).resizable({ maxHeight:200 , maxWidth: 200 });
 
+
+
     const bag = $('.bag');
-    bag.draggable({containment:".topic-sheet"}).resizable();
+    bag.draggable({containment:".topic-sheet"}).resizable({ cancel: ".cancel"});
 
 
     // way to find height of div after scroll
@@ -30,6 +33,13 @@ export class AuthorDashboardComponent implements OnInit {
     //      console.log(element.scrollHeight);
     // });
 
+  }
+
+  createElement(type:string)
+  {
+     const parent = document.getElementById('sheet');
+     const elements = ElementFactoryService.CreateElement( type , parent);
+     ElementFactoryService.ElementOptimizations(elements);
   }
 
 
@@ -45,7 +55,9 @@ export class AuthorDashboardComponent implements OnInit {
   {
 
      const inp = $(input);
+
      const overlay = $(blockOverlay);
+
 
      overlay.css('display' , 'none');
      inp.focus();
@@ -59,12 +71,13 @@ export class AuthorDashboardComponent implements OnInit {
 
   }
 
-  deActivateInputsIfDocumentClicked(targetOverlay , input)
+  deActivateInputsIfDocumentClicked(targetOverlay , targetInput)
   {
 
      const overlay = $(targetOverlay);
 
-     if( ! this.draggableElements.includes(targetOverlay.className)  ){  // improve performance .. to avoid add event listener for  each call activeInput..()
+
+     if( ! this.draggableElements.includes(targetOverlay)  ){  // improve performance .. to avoid add event listener for  each call activeInput..()
 
        document.addEventListener('click' , function (event) {
              const elem: HTMLElement = event.target as HTMLElement;
@@ -77,10 +90,10 @@ export class AuthorDashboardComponent implements OnInit {
              if(overlay.css("display") != "block" ){
                overlay.css("display" , "block" );
              }
-             $(input).css("border" , "none")
+             $(targetInput).css("border" , "none")
        });
 
-       this.draggableElements.push(targetOverlay.className);
+       this.draggableElements.push(targetOverlay);
        return;
      }
         //console.log( this.draggableElements);

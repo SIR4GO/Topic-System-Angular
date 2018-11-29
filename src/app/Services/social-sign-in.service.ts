@@ -27,6 +27,7 @@ export class SocialSignInService {
     this.socialAuthService.signIn(socialPlatformProvider).then(
       (userData) => {
         // console.log(socialPlatform+" sign in data : " , userData);
+        // log response from backend after login process in backend by using  subscribe
          this.userService.SignInSocialUser(role ,  userData).subscribe((data) => console.log(data) , error => console.log(error) );
 
       }

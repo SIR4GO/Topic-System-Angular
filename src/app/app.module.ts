@@ -25,7 +25,6 @@ import { FollowerDashboardComponent } from './Components/dashboard/follower-dash
 import { HomeDashComponent } from './Components/dashboard/author-dashboard/home-dash/home-dash.component';
 
 
-
 // Configs
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(

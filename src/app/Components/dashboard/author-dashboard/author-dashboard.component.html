@@ -30,31 +30,32 @@
 
       <div class="slider-body">
           <div id="sheet" class="topic-sheet">
+
               <div   style="width: 200px " class="bag">
-                <textarea   #input2  style=" width: 100% ; height: 100% " placeholder="title"  ></textarea>
-                <div #over2  (click)="dragBorderEffect( over2 , input2)" (dblclick)="activeInputToWriteIfClicked(over2 , input2)" class="block-overlay2" style="position: absolute ; top: 0 ; left: 0 ; right: 0 ; bottom: 0 ; z-index: 100 ; height: 100% ; width: 100%"></div>
+                  <textarea   #input1 style=" width: 100% ; height: 100% " placeholder="title"  ></textarea>
+                  <div #over1  (click)="dragBorderEffect( over1 , input1)" (dblclick)="activeInputToWriteIfClicked(over1 , input1)" style="position: absolute ; top: 0 ; left: 0 ; right: 0 ; bottom: 0 ; z-index: 100 ; height: 100% ; width: 100%"></div>
               </div>
 
-            <div   style="width: 200px " class="bag">
-              <input   style=" width: 100% ; height: 100% " type="text" placeholder="title"   #input1 />
-              <div  (click)="dragBorderEffect( over1 ,input1)" (dblclick)="activeInputToWriteIfClicked(over1 , input1)" class="block-overlay1"  #over1 style="position: absolute ; top: 0 ; left: 0 ; right: 0 ; bottom: 0 ; z-index: 100 ; height: 100% ; width: 100%"></div>
-            </div>
 
-            <div    style="width: 200px " class="bag">
-              <input   type="password" style=" width: 100% ; height: 100% " placeholder="title"  #input3   >
-              <div (click)="dragBorderEffect(over3 , input3)" (dblclick)="activeInputToWriteIfClicked(over3 , input3)" class="block-overlay3" #over3 style="position: absolute ; top: 0 ; left: 0 ; right: 0 ; bottom: 0 ; z-index: 100 ; height: 100% ; width: 100%"></div>
-            </div>
+              <div   style="width: 200px " class="bag">
+                  <textarea   #input2  style=" width: 100% ; height: 100% " placeholder="title"  ></textarea>
+                  <div #over2  (click)="dragBorderEffect( over2 , input2)" (dblclick)="activeInputToWriteIfClicked(over2 , input2)"  style="position: absolute ; top: 0 ; left: 0 ; right: 0 ; bottom: 0 ; z-index: 100 ; height: 100% ; width: 100%"></div>
+              </div>
 
+              <div   style="width: 200px " class="bag">
+                 <textarea   #input3  style=" width: 100% ; height: 100% " placeholder="title"  ></textarea>
+                 <div #over3  (click)="dragBorderEffect( over3 , input3)" (dblclick)="activeInputToWriteIfClicked(over3 , input3)"  style="position: absolute ; top: 0 ; left: 0 ; right: 0 ; bottom: 0 ; z-index: 100 ; height: 100% ; width: 100%"></div>
+              </div>
 
           </div>
 
           <div class="element-bar">
-            <i title="Topic heading" class="fa fa-heading"></i>
-            <i class="fa fa-paragraph"></i>
-            <i class="fa fa-image"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fas fa-music"></i>
-            <i class="fas fa-file-signature"></i>
+            <i (click)="createElement('text')" title="Topic heading" class="fa fa-heading"></i>
+            <i (click)="createElement('text')"  class="fa fa-paragraph"></i>
+            <i (click)="createElement('image')"  class="fa fa-image"></i>
+            <i (click)="createElement('video')" class="fab fa-youtube"></i>
+            <i (click)="createElement('audio')"  class="fas fa-music"></i>
+            <i (click)="createElement('text')" class="fas fa-file-signature"></i>
             <i class="fas fa-clipboard-check"></i>
           </div>
       </div>
